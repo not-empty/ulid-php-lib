@@ -1,0 +1,47 @@
+#!/bin/sh
+
+echo "Checking PHP Lint in src..."
+find ./src -name "*.php" -print0 | xargs -0 -n1 -P8 php -l -d display_errors=0
+find ./tests -name "*.php" -print0 | xargs -0 -n1 -P8 php -l -d display_errors=0
+find ./sample -name "*.php" -print0 | xargs -0 -n1 -P8 php -l -d display_errors=0
+if [ $? != 0 ]
+then
+    echo "Fix the PHP sintax errors before commit."
+    exit 1
+fi
+
+echo "Running Code Sniffer..."
+./vendor/bin/phpcs
+if [ $? != 0 ]
+then
+    echo "Fix the Code Sniffers errors before commit."
+    exit 1
+fi
+
+echo "Running PHP Mess Detector..."
+./vendor/bin/phpmd ./src text phpmd.xml
+./vendor/bin/phpmd ./sample text phpmd.xml
+if [ $? != 0 ]
+then
+    echo "Fix the PHP Mess Detector errors before commit."
+    exit 1
+fi
+
+echo "Running Unit Tests..."
+phpdbg -qrr vendor/bin/phpunit --configuration phpunit.xml -d memory_limit=1024M
+if [ $? != 0 ]
+then
+    echo "Fix the Unit Tests errors before commit."
+    exit 1
+fi
+
+echo "Checking Unit Coverage..."
+php contrib/coverage-checker.php coverage/coverage-unit/coverage.xml 100
+
+if [ $? != 0 ]
+then
+    echo "Raise the Unit Coverage to 100% before commit."
+    exit 1
+fi
+
+exit $?
