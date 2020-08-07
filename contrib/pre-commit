@@ -36,7 +36,7 @@ then
 fi
 
 echo "Checking Unit Coverage..."
-php contrib/coverage-checker.php coverage/coverage-unit/coverage.xml 100
+php contrib/coverage-checker.php coverage/coverage.xml 100
 
 if [ $? != 0 ]
 then
