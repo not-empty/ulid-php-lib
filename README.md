@@ -1,6 +1,6 @@
 # PHP Universally Unique Lexicographically Sortable Identifier (ULID)
 
-[![Latest Version](https://img.shields.io/github/v/release/kiwfy/ulid-php.svg?style=flat-square)](https://github.com/kiwfy/ulid-php/releases)
+[![Latest Version](https://img.shields.io/github/v/release/kiwfy/ulid-php.svg?style=flat-square&v=2)](https://github.com/kiwfy/ulid-php/releases)
 [![codecov](https://codecov.io/gh/kiwfy/ulid-php/branch/master/graph/badge.svg)](https://codecov.io/gh/kiwfy/ulid-php)
 [![Build Status](https://img.shields.io/github/workflow/status/kiwfy/ulid-php/CI?label=ci%20build&style=flat-square)](https://github.com/kiwfy/ulid-php/actions?query=workflow%3ACI)
 [![Total Downloads](https://img.shields.io/packagist/dt/kiwfy/ulid-php.svg?style=flat-square)](https://packagist.org/packages/kiwfy/ulid-php)
@@ -12,7 +12,7 @@ PHP library to create a ULID value
 
 [Release 2.0.0](https://github.com/kiwfy/ulid-php/releases/tag/2.0.0) Requires [PHP](https://php.net) 8.1
 
-[Release 1.0.1] or earlier (https://github.com/kiwfy/ulid-php/releases/tag/1.0.1) Requires [PHP](https://php.net) 7.1
+[Release 1.0.1](https://github.com/kiwfy/ulid-php/releases/tag/1.0.1) or earlier Requires [PHP](https://php.net) 7.1
 
 The recommended way to install is through [Composer](https://getcomposer.org/).
 
