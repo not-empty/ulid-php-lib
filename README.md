@@ -6,6 +6,9 @@
 [![Downloads Old](https://img.shields.io/packagist/dt/kiwfy/ulid-php?logo=old&label=downloads%20legacy)](https://packagist.org/packages/kiwfy/ulid-php)
 [![Downloads](https://img.shields.io/packagist/dt/not-empty/ulid-php-lib?logo=old&label=downloads)](https://packagist.org/packages/not-empty/ulid-php-lib)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![Packagist License (custom server)](https://img.shields.io/packagist/l/not-empty/ulid-php-lib)](https://github.com/not-empty/ulid-php-lib/blob/master/LICENSE)
+
+
 
 PHP library to create a ULID unique identifier value
 
