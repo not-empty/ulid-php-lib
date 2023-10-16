@@ -21,13 +21,14 @@ jobs:
       id: composer-cache
       uses: actions/cache@v3
       with:
-        php-version: 8.2
         path: vendor
         key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
         restore-keys: |
           ${{ runner.os }}-php-
 
     - name: Install dependencies
+      with:
+          php-version: 8.2
       if: steps.composer-cache.outputs.cache-hit != 'true'
       run: composer install --prefer-dist --no-progress --no-suggest
 
