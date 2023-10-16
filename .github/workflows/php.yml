@@ -18,6 +18,8 @@ jobs:
       uses: shivammathur/setup-php@2.26.0
       with:
         php-version: 8.2
+        extensions: dom
+        coverage: xdebug
 
     - name: Validate composer.json and composer.lock
       run: composer validate
