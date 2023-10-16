@@ -1,5 +1,5 @@
 {
-    "name": "kiwfy/ulid-php",
+    "name": "not-empty/ulid-php-lib",
     "description": "PHP Universally Unique Lexicographically Sortable Identifier (ULID)",
     "version": "2.0.1",
     "type": "library",
@@ -15,8 +15,8 @@
     },
     "authors": [
         {
-            "name": "Developer",
-            "email": "dev@kiwfy.com"
+            "name": "Not Empty Foundation",
+            "email": "dev@not-empty.com"
         }
     ],
     "autoload": {
