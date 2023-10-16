@@ -1,7 +1,7 @@
 {
     "name": "not-empty/ulid-php-lib",
     "description": "PHP Universally Unique Lexicographically Sortable Identifier (ULID)",
-    "version": "2.0.1",
+    "version": "2.0.0",
     "type": "library",
     "license": "GPL-3.0-only",
     "require": {
