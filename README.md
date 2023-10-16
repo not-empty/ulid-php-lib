@@ -1,5 +1,10 @@
 # PHP Universally Unique Lexicographically Sortable Identifier (ULID)
 
+[![Latest Version](https://img.shields.io/github/v/release/not-empty/ulid-php-lib.svg?style=flat-square)](https://github.com/not-empty/ulid-php-lib/releases)
+[![codecov](https://codecov.io/gh/not-empty/ulid-php-lib/graph/badge.svg?token=AEMV163UW6)](https://codecov.io/gh/not-empty/ulid-php-lib)
+[![CI Build](https://img.shields.io/github/actions/workflow/status/not-empty/ulid-php-lib/php.yml)](https://github.com/not-empty/ulid-php-lib/actions/workflows/php.yml)
+[![Downloads Old](https://img.shields.io/packagist/dt/kiwfy/ulid-php?logo=old&label=downloads%20legacy)](https://packagist.org/packages/kiwfy/ulid-php)
+[![Downloads](https://img.shields.io/packagist/dt/not-empty/ulid-php-lib?logo=old&label=downloads)](https://packagist.org/packages/not-empty/ulid-php-lib)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
 PHP library to create a ULID unique identifier value
