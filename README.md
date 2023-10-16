@@ -1,28 +1,35 @@
 # PHP Universally Unique Lexicographically Sortable Identifier (ULID)
 
-[![Latest Version](https://img.shields.io/github/v/release/kiwfy/ulid-php.svg?style=flat-square)](https://github.com/kiwfy/ulid-php/releases)
-[![codecov](https://codecov.io/gh/kiwfy/ulid-php/branch/master/graph/badge.svg)](https://codecov.io/gh/kiwfy/ulid-php)
-[![Build Status](https://img.shields.io/github/workflow/status/kiwfy/ulid-php/CI?label=ci%20build&style=flat-square)](https://github.com/kiwfy/ulid-php/actions?query=workflow%3ACI)
-[![Total Downloads](https://img.shields.io/packagist/dt/kiwfy/ulid-php.svg?style=flat-square)](https://packagist.org/packages/kiwfy/ulid-php)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
 
-PHP library to create a ULID value
+PHP library to create a ULID unique identifier value
 
 ### Installation
 
-Requires [PHP](https://php.net) 7.1.
+[Release 1.0](https://github.com/not-empty/ulid-php-lib/releases/tag/1.0) Requires [PHP](https://php.net) 7.3
 
 The recommended way to install is through [Composer](https://getcomposer.org/).
 
 ```sh
-composer require kiwfy/ulid-php
+composer require not-empty/ulid-php-lib
 ```
 
 ### Sample
 
 it's a good idea to look in the sample folder to understand how it works.
 
-First verify if all dependencies is installed (if need anyelse)
+First you need to building a correct environment to install dependences
+
+```sh
+docker build -t not-empty/ulid-php-lib-73 -f contrib/Dockerfile .
+```
+
+Access the container
+```sh
+docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib-73 bash
+```
+
+Verify if all dependencies is installed
 ```sh
 composer install --no-dev --prefer-dist
 ```
@@ -38,18 +45,29 @@ Want to contribute? Great!
 
 The project using a simple code.
 Make a change in your file and be careful with your updates!
-**Any new code will only be accepted with all viladations.**
+**Any new code will only be accepted with all validations.**
 
 To ensure that the entire project is fine:
 
-First install all the dev dependences
+First you need to building a correct environment to install/update all dependences
+
+```sh
+docker build -t not-empty/ulid-php-lib-73 -f contrib/Dockerfile .
+```
+
+Access the container
+```sh
+docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib-73 bash
+```
+
+Install all dependences
 ```sh
 composer install --dev --prefer-dist
 ```
 
-Second run all validations
+Run all validations
 ```sh
 composer check
 ```
 
-**Kiwfy - Open your code, open your mind!**
+**Not Empty Foundation - Free codes, full minds**
