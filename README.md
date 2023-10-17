@@ -72,7 +72,7 @@ echo $randomnessFromUlid;
 if you want an environment to run or test it, you can build and install dependences like this
 
 ```sh
-docker build --build-arg PHP_VERSION=7.3.33-cli -t not-empty/ulid-php-lib-php71 -f contrib/Dockerfile .
+docker build --build-arg PHP_VERSION=7.1.33-cli -t not-empty/ulid-php-lib-php71 -f contrib/Dockerfile .
 ```
 
 Access the container
@@ -103,7 +103,7 @@ To ensure that the entire project is fine:
 First you need to building a correct environment to install all dependences
 
 ```sh
-docker build --build-arg PHP_VERSION=7.3.33-cli -t not-empty/ulid-php-lib-php71 -f contrib/Dockerfile .
+docker build --build-arg PHP_VERSION=7.1.33-cli -t not-empty/ulid-php-lib-php71 -f contrib/Dockerfile .
 ```
 
 Access the container
