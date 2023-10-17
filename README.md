@@ -6,7 +6,7 @@ PHP library to create a ULID unique identifier value
 
 ### Installation
 
-[Release 3.0.0](https://github.com/not-empty/ulid-php-lib/releases/tag/4.0.0) Requires [PHP](https://php.net) 8.1
+[Release 4.0.0](https://github.com/not-empty/ulid-php-lib/releases/tag/4.0.0) Requires [PHP](https://php.net) 8.1
 
 [Release 3.0.0](https://github.com/not-empty/ulid-php-lib/releases/tag/3.0.0) Requires [PHP](https://php.net) 7.4
 
