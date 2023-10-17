@@ -6,7 +6,7 @@ PHP library to create a ULID unique identifier value
 
 ### Installation
 
-[Release 1.0.0](https://github.com/not-empty/ulid-php-lib/releases/tag/1.0) Requires [PHP](https://php.net) 7.3
+[Release 1.0.0](https://github.com/not-empty/ulid-php-lib/releases/tag/1.0.0) Requires [PHP](https://php.net) 7.1
 
 The recommended way to install is through [Composer](https://getcomposer.org/).
 
@@ -21,12 +21,12 @@ it's a good idea to look in the sample folder to understand how it works.
 First you need to building a correct environment to install dependences
 
 ```sh
-docker build -t not-empty/ulid-php-lib-73 -f contrib/Dockerfile .
+docker build --build-arg PHP_VERSION=7.1.33-cli -t not-empty/ulid-php-lib-php71 -f contrib/Dockerfile .
 ```
 
 Access the container
 ```sh
-docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib-73 bash
+docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib-php71 bash
 ```
 
 Verify if all dependencies is installed
@@ -52,12 +52,12 @@ To ensure that the entire project is fine:
 First you need to building a correct environment to install/update all dependences
 
 ```sh
-docker build -t not-empty/ulid-php-lib-73 -f contrib/Dockerfile .
+docker build --build-arg PHP_VERSION=7.1.33-cli -t not-empty/ulid-php-lib-php71 -f contrib/Dockerfile .
 ```
 
 Access the container
 ```sh
-docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib-73 bash
+docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib-php71 bash
 ```
 
 Install all dependences
