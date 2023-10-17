@@ -1,4 +1,4 @@
-ARG PHP_VERSION=latest
+ARG PHP_VERSION=7.4.33-cli
 
 FROM php:${PHP_VERSION}
 
