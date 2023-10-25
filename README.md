@@ -77,7 +77,7 @@ docker build --build-arg PHP_VERSION=7.1.33-cli -t not-empty/ulid-php-lib:php71 
 
 Access the container
 ```sh
-docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib:php71 bash
+docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib:php72 bash
 ```
 
 Verify if all dependencies is installed
