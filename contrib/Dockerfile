@@ -1,4 +1,4 @@
-ARG PHP_VERSION=8.2-cli
+ARG PHP_VERSION=8.3-rc-cli
 
 FROM php:${PHP_VERSION}
 
