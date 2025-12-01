@@ -123,12 +123,12 @@ To ensure that the entire project is fine:
 First you need to building a correct environment to install all dependences
 
 ```sh
-docker build --build-arg PHP_VERSION=8.3-rc-cli -t not-empty/ulid-php-lib:php83 -f contrib/Dockerfile .
+docker build --build-arg PHP_VERSION=8.4-cli -t not-empty/ulid-php-lib:php84 -f contrib/Dockerfile .
 ```
 
 Access the container
 ```sh
-docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib:php83 bash
+docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib:php84 bash
 ```
 
 Install all dependences
