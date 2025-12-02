@@ -2,3 +2,5 @@ coverage
 vendor
 .scannerwork
 .phpunit.result.cache
+.phpunit.cache
+var/*

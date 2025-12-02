@@ -8,11 +8,8 @@ if [ -z $container ]
 fi
 
 echo "Checking PHP Lint in src..."
-docker exec $container find ./src -name "*.php" -print0 | xargs -0 -n1 -P8 php -l -d display_errors=0
-docker exec $container find ./tests -name "*.php" -print0 | xargs -0 -n1 -P8 php -l -d display_errors=0
-docker exec $container find ./sample -name "*.php" -print0 | xargs -0 -n1 -P8 php -l -d display_errors=0
-if [ $? != 0 ]
-then
+docker exec -w /var/www/html "$container" composer lint
+if [ $? != 0 ]; then
     echo "Fix the PHP sintax errors before commit."
     exit 1
 fi
@@ -25,12 +22,11 @@ then
     exit 1
 fi
 
-echo "Running PHP Mess Detector..."
-docker exec $container ./vendor/bin/phpmd ./src text phpmd.xml
-docker exec $container ./vendor/bin/phpmd ./sample text phpmd.xml
+echo "Running PHP Stan..."
+docker exec $container ./vendor/bin/phpstan analyse
 if [ $? != 0 ]
 then
-    echo "Fix the PHP Mess Detector errors before commit."
+    echo "Fix the PHP Stan errors before commit."
     exit 1
 fi
 

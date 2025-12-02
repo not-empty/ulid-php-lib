@@ -14,6 +14,8 @@ PHP library to create a ULID unique identifier value
 
 ### Installation
 
+[Release 8.0.0](https://github.com/not-empty/ulid-php-lib/releases/tag/8.0.0) Requires [PHP](https://php.net) 8.4
+
 [Release 7.0.0](https://github.com/not-empty/ulid-php-lib/releases/tag/7.0.0) Requires [PHP](https://php.net) 8.3
 
 [Release 6.0.0](https://github.com/not-empty/ulid-php-lib/releases/tag/6.0.0) Requires [PHP](https://php.net) 8.2
@@ -92,12 +94,12 @@ echo $randomnessFromUlid;
 if you want an environment to run or test it, you can build and install dependences like this
 
 ```sh
-docker build --build-arg PHP_VERSION=8.3-rc-cli -t not-empty/ulid-php-lib:php83 -f contrib/Dockerfile .
+docker build --build-arg PHP_VERSION=8.4-cli -t not-empty/ulid-php-lib:php84 -f contrib/Dockerfile .
 ```
 
 Access the container
 ```sh
-docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib:php83 bash
+docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib:php84 bash
 ```
 
 Verify if all dependencies is installed
@@ -128,7 +130,7 @@ docker build --build-arg PHP_VERSION=8.4-cli -t not-empty/ulid-php-lib:php84 -f 
 
 Access the container
 ```sh
-docker run -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib:php84 bash
+docker run --name ulid-php-lib -v ${PWD}/:/var/www/html -it not-empty/ulid-php-lib:php84 bash
 ```
 
 Install all dependences
