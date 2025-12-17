@@ -1,0 +1,9 @@
+services:
+  ulid-php-lib:
+    build:
+      context: ./
+      dockerfile: ./ops/Dockerfile
+    container_name: ulid-php-lib
+    volumes:
+      - ./:/var/www/html
+    command: tail -f /dev/null

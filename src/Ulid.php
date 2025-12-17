@@ -204,7 +204,7 @@ class Ulid
         }
 
         $carry = substr(
-            $carry,
+            (string) $carry,
             0,
             UlidConstants::TIME_LENGTH
         );

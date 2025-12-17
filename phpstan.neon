@@ -1,0 +1,8 @@
+parameters:
+  level: 5
+  paths:
+    - src
+    - sample
+  treatPhpDocTypesAsCertain: true
+  checkMissingCallableSignature: true
+  tmpDir: var/phpstan

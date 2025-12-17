@@ -17,8 +17,13 @@
 
     <rule ref="Generic.PHP.ForbiddenFunctions">
         <properties>
-            <property name="forbiddenFunctions" type="array"
-                      value="delete=>unset,print=>echo,create_function=>null,var_dump=>null,die=>null" />
+            <property name="forbiddenFunctions" type="array">
+                <element key="delete" value="unset" />
+                <element key="print" value="echo" />
+                <element key="create_function" value="null" />
+                <element key="var_dump" value="null" />
+                <element key="die" value="null" />
+            </property>
         </properties>
     </rule>
     <rule ref="Generic.Arrays.DisallowLongArraySyntax" />
@@ -30,7 +35,6 @@
     <rule ref="Generic.Files.LineEndings" />
     <rule ref="Generic.Formatting.DisallowMultipleStatements" />
     <rule ref="Generic.Formatting.SpaceAfterCast" />
-    <rule ref="Generic.Functions.CallTimePassByReference" />
     <rule ref="Generic.Functions.FunctionCallArgumentSpacing" />
     <rule ref="Generic.Metrics.CyclomaticComplexity">
         <properties>
@@ -59,13 +63,10 @@
     <rule ref="Generic.Strings.UnnecessaryStringConcat">
         <properties>
             <property name="allowMultiline" value="true" />
-            <property name="error" value="false" />
         </properties>
     </rule>
     <rule ref="Generic.WhiteSpace.DisallowTabIndent" />
     <rule ref="Generic.WhiteSpace.ScopeIndent" />
-    <rule ref="MySource.PHP.EvalObjectFactory" />
-    <rule ref="MySource.PHP.GetRequestData" />
     <rule ref="PEAR.Commenting.InlineComment" />
     <rule ref="PSR2" />
     <rule ref="PSR1.Files.SideEffects.FoundWithSymbols">
@@ -86,8 +87,6 @@
     <rule ref="Squiz.Scope.MethodScope" />
     <rule ref="Squiz.Scope.StaticThisUsage" />
     <rule ref="Squiz.WhiteSpace.CastSpacing" />
-    <rule ref="Squiz.WhiteSpace.LanguageConstructSpacing" />
-    <rule ref="Squiz.WhiteSpace.PropertyLabelSpacing" />
     <rule ref="Squiz.WhiteSpace.ScopeClosingBrace" />
     <rule ref="Squiz.WhiteSpace.ScopeKeywordSpacing" />
     <rule ref="Squiz.WhiteSpace.SemicolonSpacing" />
