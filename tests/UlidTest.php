@@ -230,6 +230,19 @@ class UlidTest extends TestCase
         $ulid->decodeTime('QS234SAD23RADSWRA3FADQ3RS2');
     }
 
+      /**
+     * @covers Ulid\Ulid::isValidFormat
+     */
+    public function testIsValidFormatDoesNotValidateCharacters()
+    {
+        $ulid = new Ulid();
+
+        $result = $ulid->isValidFormat('01E475VQGHNW990PVHXFDT4C6W');
+
+        $this->assertTrue($result);
+    }
+
+
     protected function tearDown(): void
     {
         //

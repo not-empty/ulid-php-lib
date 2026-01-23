@@ -16,14 +16,18 @@ class Ulid
      * @param string $ulid
      * @return bool
      */
-    public function isValidFormat(
-        string $ulid
-    ): bool {
+    public function isValidFormat(string $ulid): bool
+    {
         $validator = UlidConstants::TIME_LENGTH + UlidConstants::RANDOM_LENGTH;
+
         if (strlen($ulid) !== $validator) {
             return false;
         }
-        return true;
+
+        return preg_match(
+            UlidConstants::REGEX,
+            $ulid
+        ) === 1;
     }
 
     /**
