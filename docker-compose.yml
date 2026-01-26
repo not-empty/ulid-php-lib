@@ -2,7 +2,7 @@ services:
   ulid-php-lib:
     build:
       context: ./
-      dockerfile: ./ops/Dockerfile
+      dockerfile: ./contrib/Dockerfile
     container_name: ulid-php-lib
     volumes:
       - ./:/var/www/html
