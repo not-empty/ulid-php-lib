@@ -16,11 +16,15 @@ class Ulid
      * @param string $ulid
      * @return bool
      */
-    public function isValidFormat(
-        string $ulid
-    ): bool {
+    public function isValidFormat(string $ulid): bool
+    {
         $validator = UlidConstants::TIME_LENGTH + UlidConstants::RANDOM_LENGTH;
+
         if (strlen($ulid) !== $validator) {
+            return false;
+        }
+
+        if (!preg_match(UlidConstants::REGEX, $ulid)) {
             return false;
         }
         return true;
@@ -155,9 +159,9 @@ class Ulid
         $encodingChars = UlidConstants::CHARS;
 
         for ($i = 9; $i >= 0; $i--) {
-            $mod = $time % UlidConstants::LENGHT;
+            $mod = $time % UlidConstants::LENGTH;
             $timeChars = $encodingChars[$mod] . $timeChars;
-            $time = ($time - $mod) / UlidConstants::LENGHT;
+            $time = ($time - $mod) / UlidConstants::LENGTH;
         }
 
         $this->hasIncrementLastRandChars(
@@ -195,7 +199,7 @@ class Ulid
             if ($encodingIndex === false) {
                 throw new Exception('Invalid ULID character: ' . $char);
             }
-            $exponential = pow(UlidConstants::LENGHT, $index);
+            $exponential = pow(UlidConstants::LENGTH, $index);
             $carry += ($encodingIndex * $exponential);
         }
 
